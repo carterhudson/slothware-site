@@ -93,14 +93,14 @@
     <a class="back" href="/">&larr; Slothware</a>
 
     <h1>Tripwire Privacy Policy</h1>
-    <p class="dates">Effective 5 September 2026. Last updated 5 September 2026.</p>
+    <p class="dates">Effective 5 September 2026. Last updated 16 November 2026.</p>
 
     <div class="note">
       <p>
         <strong>The short version.</strong> Tripwire has no accounts and no servers. Your places,
         rooms, and reminders are stored on your phone and are never sent to us &mdash; we have no way
         to see them. The app talks to Google only to draw maps, to look up a place you search for by
-        name, and through Android's own speech and backup features.
+        name, and through Android's own speech, assistant, and backup features.
       </p>
     </div>
 
@@ -135,11 +135,6 @@
             <td>Stays on the device</td>
           </tr>
           <tr>
-            <td>Nearby Wi-Fi networks (identifier, name, frequency, signal strength)</td>
-            <td>Optional additional signal for room detection. Off by default</td>
-            <td>Stays on the device</td>
-          </tr>
-          <tr>
             <td>Physical activity (step detection)</td>
             <td>To pause scanning while you are sitting still, which saves battery. Optional, and
                 only requested on phones lacking the sensors that do this without permission</td>
@@ -157,8 +152,9 @@
     <h3>What Tripwire does not collect</h3>
     <ul>
       <li>No account, sign-in, name, email address, or advertising identifier.</li>
-      <li>No audio. Dictation is handled by Android's own speech recognizer, which owns the
-          microphone; Tripwire receives only the resulting text and never has microphone access.</li>
+      <li>No audio recordings. Tripwire uses the microphone only while you are dictating a reminder,
+          passes the audio straight to Android's speech recognizer, and keeps only the resulting
+          text. Audio is never saved.</li>
       <li>No analytics, advertising, tracking, or crash-reporting services. The app contains no
           such components.</li>
       <li>No contacts, photos, files, or calendar data.</li>
@@ -166,19 +162,24 @@
 
     <h2>When the app talks to Google</h2>
     <p>
-      Tripwire has no backend of its own. Three features rely on Google services built into Android,
-      and their handling is governed by
-      <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>:
+      Tripwire has no backend of its own. These features rely on Google services built into Android,
+      or on your phone's assistant, and their handling is governed by
+      <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a> or the
+      assistant's own policy:
     </p>
     <ul>
       <li><strong>Maps and place search.</strong> When you pick a place, map imagery is fetched from
           Google Maps. When you type a place name, that text is sent to Google Places to return
           matching suggestions. Your own location is not attached to that search.</li>
-      <li><strong>Dictation.</strong> Speaking a reminder opens Android's speech recognizer. Whether
-          your speech is processed on the device or by Google's servers is determined by your phone's
-          settings, not by Tripwire. Tripwire receives only the transcribed text, which is then
-          interpreted on-device by Android's built-in AI model. The phrase is not sent anywhere by
-          the app.</li>
+      <li><strong>Dictation.</strong> While you speak a reminder, Tripwire streams the microphone audio
+          to your phone's speech recognition service (usually Google's). That service may process it
+          on the device or on Google's servers; Tripwire does not restrict it to on-device
+          recognition. Tripwire receives only the transcribed text, which is then interpreted
+          on-device by Android's built-in AI model. The phrase is not sent anywhere by the app.</li>
+      <li><strong>Your phone's assistant.</strong> If your assistant supports Android app functions,
+          you can ask it to create, find, or complete Tripwire reminders, or to pause and resume
+          them. Tripwire answers those requests on your phone and sends nothing to us. What the
+          assistant does with your request is governed by the assistant's own privacy policy.</li>
       <li><strong>Backup.</strong> If Android Backup is enabled on your phone, your Tripwire data is
           included in your device backup to your own Google Drive. On Android 9 and later, that
           backup is end-to-end encrypted with a key derived from your screen lock, so Google cannot
